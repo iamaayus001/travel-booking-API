@@ -19,6 +19,22 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
+// Welcome route
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'Welcome to Tour Booking API',
+    version: '1.0.0',
+    endpoints: {
+      tours: '/api/v1/tours',
+      users: '/api/v1/users',
+      signup: '/api/v1/users/signup',
+      login: '/api/v1/users/login',
+    },
+    documentation: 'https://github.com/iamaayus001/tour-booking-api',
+  });
+});
+
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 
