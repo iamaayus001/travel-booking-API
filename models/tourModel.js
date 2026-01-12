@@ -58,10 +58,9 @@ const tourSchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
-    // images removed per request
     createdAt: {
       type: Date,
-      default: Date.now(),
+      default: Date.now,
       select: false,
     },
     startDates: [Date],

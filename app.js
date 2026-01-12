@@ -23,15 +23,24 @@ if (process.env.NODE_ENV === 'development') {
 app.get('/', (req, res) => {
   res.status(200).json({
     status: 'success',
-    message: 'Welcome to Tour Booking API',
-    version: '1.0.0',
-    endpoints: {
-      tours: '/api/v1/tours',
-      users: '/api/v1/users',
-      signup: '/api/v1/users/signup',
-      login: '/api/v1/users/login',
+    data: {
+      message: 'Welcome to the Tour Booking API 🌍',
+      description: 'A robust API for booking and managing nature tours.',
+      version: '1.0.0',
+      documentation: 'https://github.com/iamaayus001/tour-booking-api',
+      live_url: 'https://travel-booking-api-gf96.onrender.com',
+      endpoints: {
+        tours: {
+          all_tours: '/api/v1/tours',
+          top_5_cheap: '/api/v1/tours/top-5-cheap',
+          tour_stats: '/api/v1/tours/tour-stats',
+        },
+        users: {
+          login: 'POST /api/v1/users/login',
+          signup: 'POST /api/v1/users/signup',
+        },
+      },
     },
-    documentation: 'https://github.com/iamaayus001/tour-booking-api',
   });
 });
 

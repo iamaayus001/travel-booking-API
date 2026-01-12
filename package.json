@@ -7,10 +7,17 @@
     "start": "node server.js",
     "dev": "cross-env NODE_ENV=development nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "mongoose",
+    "api",
+    "tour-booking"
+  ],
+  "author": "Aayush",
   "license": "ISC",
-  "description": "",
+  "description": "A RESTful API for managing tours with nature",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "dotenv": "^16.5.0",
