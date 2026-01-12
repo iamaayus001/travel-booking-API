@@ -1,4 +1,4 @@
-# 🗺️ Tour Booking API
+# 🗺️ Travel Booking API
 
 A RESTful API for managing tours with JWT authentication, role-based access control, and MongoDB aggregations.
 
